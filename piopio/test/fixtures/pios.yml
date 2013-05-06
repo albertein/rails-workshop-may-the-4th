@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  pollito_id: 1
+  message: MyString
+
+two:
+  pollito_id: 1
+  message: MyString

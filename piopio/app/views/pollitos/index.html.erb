@@ -1,0 +1,29 @@
+<h1>List of chicks ;) </h1>
+
+<p>Bienviendo <%= current_pollito.name %>
+<!-- rails g controller Pollitos
+resources :pollitos en routes.rb
+en pollitos_controller definir index como @pollitos = Pollito.all
+Definir vista (Usted esta aqui :)
+-->
+<table class='table table-bordered table-striped'>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @pollitos.each do |pollito| %>
+      <tr>
+        <td> <%= pollito.name %> </td>
+        <td> <%= link_to "Editar", edit_pollito_path(pollito), :class => 'btn btn-mini' %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<div class='well'>
+  <%= link_to "Nuevo", new_pollito_path,
+    :class => 'btn btn-primary' %>
+</div>
+

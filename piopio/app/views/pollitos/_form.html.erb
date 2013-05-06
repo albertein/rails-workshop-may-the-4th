@@ -1,0 +1,12 @@
+<%= form_for @pollito do |f| %>
+<%= f.label :name, "Nombre" %>
+<%= f.text_field :name %>
+<div class='well'>
+  <%= link_to "Cancelar", pollitos_path, :class => 'btn btn-danger' %>
+  <%= submit_tag "Guardar", :class => 'btn btn-primary' %>
+</div>
+<% end %>
+
+<% @pollito.errors.full_messages.each do |m| %>
+  <p><%= m %></p>
+<% end %>
